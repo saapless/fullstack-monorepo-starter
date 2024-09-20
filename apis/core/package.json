@@ -1,0 +1,10 @@
+{
+  "name": "@apis/core",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "./serverless.ts",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "serverless-iam-roles-per-function": "^3.2.0"
+  }
+}

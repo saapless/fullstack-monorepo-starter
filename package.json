@@ -1,0 +1,47 @@
+{
+  "name": "fullstack-monorepo-starter",
+  "version": "1.0.0",
+  "description": "Saapless fullstack turbo monorepo",
+  "main": "turbo.json",
+  "private": "true",
+  "author": "Saapless Team <dev@saapless.com>",
+  "license": "MIT",
+  "packageManager": "^npm@8.19.2",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.19.0",
+    "yarn": "use-npm",
+    "pnpm": "use-npm"
+  },
+  "scripts": {
+    "test": "dotenvx run -- jest",
+    "dev": "dotenvx run -- turbo dev",
+    "build": "dotenvx run -- turbo build",
+    "deploy": "dotenvx run -- serverless deploy",
+    "package": "dotenvx run -- serverless package",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.14.1",
+    "@serverless/typescript": "^3.38.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^20",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-turbo": "^2.1.2",
+    "husky": "^9.1.6",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "serverless": "^4.3.2",
+    "ts-jest": "^29.2.5",
+    "turbo": "^2.1.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.5.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "apis/*",
+    "packages/*"
+  ]
+}

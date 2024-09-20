@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "turbo",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json",
+      "./apps/*/tsconfig.json",
+      "./apis/*/tsconfig.json",
+      "./packages/*/tsconfig.json"
+    ]
+  }
+}
