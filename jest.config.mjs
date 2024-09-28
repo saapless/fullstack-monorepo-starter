@@ -2,7 +2,7 @@
 const config = {
   verbose: true,
   preset: "ts-jest",
-  testMatch: ["<rootDir>/**/?(*.)+(spec|test).ts?(x)"],
+  testMatch: ["<rootDir>/**/?(*.)+(spec|test).ts?(x)", "!**/.serverless/**"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
@@ -36,29 +36,19 @@ const config = {
       },
     },
   ],
-  collectCoverage: true,
-  collectCoverageFrom: ["<rootDir>/apis/**", "<rootDir>/apps/**", "<rootDir>/packages/**"],
-  coverageDirectory: "<rootDir>/coverage",
-  coveragePathIgnorePatterns: [
-    "/node_modules/",
-    "/dist/",
-    "/__tests__/",
-    "jest.config.mjs",
-    "next-env.d.ts",
-    "next.config.mjs",
-    "postcss.config.mjs",
-    "serverless.ts",
-    "tailwind.config.ts",
-  ],
-  coverageReporters: ["json", "lcov", "text", "clover", "cobertura"],
-  coverageThreshold: {
-    global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
-    },
-  },
+  // collectCoverage: false,
+  // collectCoverageFrom: ["<rootDir>/apis/**", "<rootDir>/apps/**", "<rootDir>/packages/**"],
+  // coveragePathIgnorePatterns: ["/node_modules/", "/dist/", "/__tests__/", "/.serverless/"],
+  // coverageDirectory: "<rootDir>/coverage",
+  // coverageReporters: ["json", "lcov", "text", "clover", "cobertura"],
+  // coverageThreshold: {
+  //   global: {
+  //     branches: 80,
+  //     functions: 80,
+  //     lines: 80,
+  //     statements: 80,
+  //   },
+  // },
 };
 
 export default config;

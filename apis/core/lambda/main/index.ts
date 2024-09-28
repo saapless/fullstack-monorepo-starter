@@ -2,7 +2,11 @@ import { handlerPath } from "../../../../packages/libs/handlerPath";
 
 export default {
   handler: `${handlerPath(__dirname)}/handler.main`,
-  events: [],
+  events: [
+    {
+      httpApi: "GET /",
+    },
+  ],
   environment: {},
   iamRoleStatements: [],
 };

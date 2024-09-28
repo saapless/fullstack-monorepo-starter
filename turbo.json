@@ -13,6 +13,13 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "deploy": {
+      "dependsOn": ["^deploy"]
+    },
+    "remove": {
+      "dependsOn": ["^remove"]
     }
-  }
+  },
+  "globalEnv": ["CI"]
 }

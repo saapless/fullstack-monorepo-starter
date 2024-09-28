@@ -15,14 +15,19 @@
   },
   "scripts": {
     "test": "dotenvx run -- jest",
+    "test:e2e": "dotenvx run -- npx playwright test",
+    "test:ci": "dotenvx run -- jest --ci --silent",
     "dev": "dotenvx run -- turbo dev",
     "build": "dotenvx run -- turbo build",
-    "deploy": "dotenvx run -- serverless deploy",
-    "package": "dotenvx run -- serverless package",
+    "deploy": "dotenvx run -- turbo deploy",
+    "remove": "dotenvx run -- turbo remove",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@dotenvx/dotenvx": "^1.14.1",
+    "@playwright/test": "^1.47.2",
     "@serverless/typescript": "^3.38.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.1",

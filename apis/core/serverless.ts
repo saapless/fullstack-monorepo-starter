@@ -20,6 +20,10 @@ export default {
       lambda: true,
       apiGateway: true,
     },
+    httpApi: {
+      shouldStartNameWithService: true,
+      cors: true,
+    },
   },
   useDotenv: true,
   package: {
@@ -32,5 +36,10 @@ export default {
   resources: {
     Resources: {},
   },
-  plugins: ["serverless-iam-roles-per-function"],
+  plugins: ["serverless-iam-roles-per-function", "serverless-offline"],
+  custom: {
+    "serverless-offline": {
+      httpPort: 4000,
+    },
+  },
 } satisfies AWS;
