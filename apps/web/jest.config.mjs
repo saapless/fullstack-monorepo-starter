@@ -1,7 +1,7 @@
 /** @type {import('jest').Config} **/
 const config = {
   preset: "ts-jest",
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
 };
 
 export default config;
