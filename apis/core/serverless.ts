@@ -1,6 +1,6 @@
 import type { AWS } from "@serverless/typescript";
 
-import main from "./lambda/main";
+import main from "./src/lambda/main";
 
 export default {
   // "org" ensures this Service is used with the correct Serverless Framework Access Key.

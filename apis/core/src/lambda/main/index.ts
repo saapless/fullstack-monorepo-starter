@@ -1,4 +1,4 @@
-import { handlerPath } from "../../../../packages/libs/handlerPath";
+import { handlerPath } from "@pkg/libs/handlerPath";
 
 export default {
   handler: `${handlerPath(__dirname)}/handler.main`,

@@ -29,7 +29,7 @@ export default {
           },
           Policies: [
             {
-              PolicyName: "web-app-policy-${env:STAGE}",
+              PolicyName: "web-app-policy-${sls:stage}",
               PolicyDocument: {
                 Version: "2012-10-17",
                 Statement: [
@@ -68,7 +68,7 @@ export default {
       AmplifyApp: {
         Type: "AWS::Amplify::App",
         Properties: {
-          Name: "web-app-${env:STAGE}",
+          Name: "web-app-${sls:stage}",
           Repository: "${env:REPOSITORY}",
           AccessToken: "${env:GITHUB_TOKEN}",
           EnableBranchAutoDeletion: true,
@@ -99,7 +99,7 @@ export default {
           EnvironmentVariables: [
             {
               Name: "REACT_APP_STAGE",
-              Value: "${env:STAGE}",
+              Value: "${sls:stage}",
             },
           ],
         },

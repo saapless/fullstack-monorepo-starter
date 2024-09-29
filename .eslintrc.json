@@ -4,12 +4,14 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended-legacy",
     "turbo",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "import"
   ],
   "parserOptions": {
     "project": [
@@ -17,6 +19,23 @@
       "./apps/*/tsconfig.json",
       "./apis/*/tsconfig.json",
       "./packages/*/tsconfig.json"
+    ]
+  },
+  "rules": {
+    "import/order": [
+      1,
+      {
+        "groups": [
+          "type",
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ]
+      }
     ]
   }
 }

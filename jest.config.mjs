@@ -9,7 +9,6 @@ const config = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   testEnvironment: "node",
   testTimeout: 10000,
-  modulePathIgnorePatterns: ["/.serverless/", "/.turbo/", "/.husky/", "/.next/"],
   projects: [
     {
       displayName: "apps",
@@ -18,6 +17,7 @@ const config = {
       transform: {
         "^.+\\.(ts|tsx)$": "ts-jest",
       },
+      setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
     },
     {
       displayName: "apis",
@@ -36,19 +36,28 @@ const config = {
       },
     },
   ],
-  // collectCoverage: false,
-  // collectCoverageFrom: ["<rootDir>/apis/**", "<rootDir>/apps/**", "<rootDir>/packages/**"],
-  // coveragePathIgnorePatterns: ["/node_modules/", "/dist/", "/__tests__/", "/.serverless/"],
-  // coverageDirectory: "<rootDir>/coverage",
-  // coverageReporters: ["json", "lcov", "text", "clover", "cobertura"],
-  // coverageThreshold: {
-  //   global: {
-  //     branches: 80,
-  //     functions: 80,
-  //     lines: 80,
-  //     statements: 80,
-  //   },
-  // },
+  collectCoverageFrom: [
+    "<rootDir>/apis/**/src/**",
+    "<rootDir>/apps/**/src/**",
+    "<rootDir>/packages/**/src/**",
+  ],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/dist/",
+    "/__tests__/",
+    "/.serverless/",
+    "/.next/",
+  ],
+  coverageDirectory: "<rootDir>/coverage",
+  coverageReporters: ["json", "lcov", "text", "clover", "cobertura"],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
 };
 
 export default config;

@@ -1,4 +1,4 @@
-import { handlerPath } from "../handlerPath";
+import { handlerPath } from "../src/handlerPath";
 
 describe("the handlerPath utility", () => {
   describe("when given a valid path", () => {

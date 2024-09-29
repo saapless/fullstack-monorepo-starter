@@ -1,5 +1,8 @@
 {
   "name": "@pkg/libs",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "exports": {
+    "./*": "./src/*.ts"
+  }
 }
