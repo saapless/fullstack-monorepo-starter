@@ -1,1 +1,1 @@
-npm test -- -o -b
+npm test -- -o -b --silent
