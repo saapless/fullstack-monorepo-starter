@@ -47,10 +47,42 @@ Everything you need to get started building your next big project.
 3. Create your repository.
 4. Clone the repository locally for development:
 
-```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-```
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+   ```
+
+5. Set up your environment variables:
+
+   Create a `.env` file in the root of the project based on the `.env.example` file provided. You can do this by running:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+6. Modify the values in the `.env` file to match your local and cloud environment:
+
+   - `STAGE`: Set the project stage (e.g., `dev`, `prod`).
+   - `REGION`: Specify the AWS region (e.g., `eu-central-1`).
+   - `AWS_PROFILE` (optional): Set the AWS profile to use if you have multiple profiles configured locally.
+   - `REPOSITORY`: Provide the URL of the GitHub repository.
+   - `BRANCH`: Set the GitHub branch used for Amplify hosting.
+   - `GITHUB_TOKEN`: Add your GitHub personal access token for repository access during deployments.
+   - `APP_URL`: Set the front-end app URL for use in end-to-end tests (default is `http://localhost:3000`).
+
+7. Install the project dependencies:
+
+   ```bash
+   npm install
+   ```
+
+8. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+9. Your app should now be running locally!
 
 ## Local Development
 
