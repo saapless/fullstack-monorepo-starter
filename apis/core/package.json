@@ -1,17 +1,12 @@
 {
   "name": "@apis/core",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
-  "main": "./serverless.ts",
   "scripts": {
-    "test": "jest",
-    "dev": "serverless offline",
-    "deploy": "serverless deploy",
-    "remove": "serverless remove"
+    "test": "jest"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.145",
-    "serverless-iam-roles-per-function": "^3.2.0",
-    "serverless-offline": "^14.3.2"
+    "@types/aws-lambda": "^8.10.145"
   }
 }

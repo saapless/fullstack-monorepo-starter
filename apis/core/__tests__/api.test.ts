@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { APIGatewayProxyEventV2 } from "aws-lambda";
+import type { APIGatewayProxyEventV2 } from "aws-lambda";
 import { MainHandler } from "../src/lambda/main/handler";
 
 describe("core api tests", () => {
