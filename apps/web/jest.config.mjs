@@ -4,14 +4,13 @@ const createJestConfig = nextJest({
   dir: "./",
 });
 
-/** @type {import('@jest/types')} **/
+/** @type {import('jest').Config} **/
 
-const config = {
+const config = createJestConfig({
   rootDir: "./",
-  verbose: true,
   testMatch: ["<rootDir>/__tests__/?(*.)+(spec|test).ts?(x)"],
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-};
+});
 
-export default createJestConfig(config);
+export default config;

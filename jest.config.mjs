@@ -1,9 +1,3 @@
-import nextJest from "next/jest.js";
-
-const createJestConfig = nextJest({
-  dir: "./apps/*",
-});
-
 /** @type {import('jest').Config} **/
 
 const config = {
@@ -17,9 +11,6 @@ const config = {
     "<rootDir>/apps/**/src/**",
     "<rootDir>/packages/**/src/**",
   ],
-  transform: {
-    "^.+\\.(t|j)sx?$": "@swc/jest",
-  },
   extensionsToTreatAsEsm: [".ts", ".tsx"],
   coveragePathIgnorePatterns: ["/node_modules/", "/dist/", "/__tests__/", "/.next/"],
   coverageDirectory: "<rootDir>/coverage",
@@ -34,4 +25,4 @@ const config = {
   },
 };
 
-export default createJestConfig(config);
+export default config;
