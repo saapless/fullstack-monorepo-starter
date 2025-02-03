@@ -11,7 +11,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.config({
-    extends: ["next"],
+    extends: ["next", "prettier"],
   }),
 ];
 

@@ -4,11 +4,13 @@ Everything you need to get started building your next big project.
 
 ## Features
 
-- **TypeScript**: Enjoy static type checking and improved code quality.
-- **Task runner by Turborepo**: Efficient task execution for monorepos.
-- **REST API on AWS via Serverless Framework**: Deploy and manage serverless applications.
-- **Next.js App Client**: Build modern web applications with React and server-side rendering.
-- **Unit testing with Jest & E2E testing with Playwright**: Ensure your code works as expected.
+- **Turborepo**: For orchestrating tasks across multiple packages and apps.
+- **TypeScript**: Ensures static type safety across the project.
+- **ESLint & Prettier**: Maintain clean and consistent code formatting.
+- **Husky & Commitlint**: Pre-commit hooks and git message linting for standardized commits.
+- **Jest & Playwright**: Provides unit and end-to-end testing support.
+- **AWS CDK**: Deploy and manage AWS infrastructure for serverless applications.
+- **Next.js**: Build modern web applications with React and server-side rendering.
 
 ## Table of Contents
 
@@ -30,15 +32,6 @@ Everything you need to get started building your next big project.
 - `/apis` - APIs and backend services.
 - `/packages` - Shared libraries, configuration files, and scripts.
 - `/e2e` - End-to-end tests setup and configurations.
-
-### Utilities
-
-- **Turborepo**: For orchestrating tasks across multiple packages and apps.
-- **TypeScript**: Ensures static type safety across the project.
-- **ESLint & Prettier**: Maintain clean and consistent code formatting.
-- **Husky & Commitlint**: Pre-commit hooks and git message linting for standardized commits.
-- **Jest & Playwright**: Provides unit and end-to-end testing support.
-- **Serverless Framework**: Deploy and manage AWS infrastructure for serverless applications.
 
 ## Getting Started
 
@@ -148,7 +141,6 @@ Here are some helpful links to documentation and tools used in this monorepo sta
 
 - [Saapless](https://www.saapless.com) - Learn more about the Saapless platform and its offerings.
 - [Turborepo Documentation](https://turbo.build/repo/docs) - Comprehensive guide on using Turborepo for managing tasks in monorepos.
-- [Serverless Framework Documentation](https://www.serverless.com/framework/docs) - Official docs on how to build and deploy serverless applications.
 - [Next.js Documentation](https://nextjs.org/docs) - Everything you need to know to build modern web applications using Next.js.
 - [Playwright Documentation](https://playwright.dev/docs/intro) - Explore how to write reliable end-to-end tests using Playwright.
 - [Jest Documentation](https://jestjs.io/docs/getting-started) - A guide to writing unit tests with Jest.
