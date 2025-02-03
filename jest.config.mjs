@@ -1,53 +1,18 @@
 /** @type {import('jest').Config} **/
+
 const config = {
   verbose: true,
-  preset: "ts-jest",
-  testMatch: ["<rootDir>/**/?(*.)+(spec|test).ts?(x)", "!**/.serverless/**"],
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-  },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-  testEnvironment: "node",
   testTimeout: 10000,
-  projects: [
-    {
-      displayName: "apps",
-      testMatch: ["<rootDir>/apps/**/?(*.)+(spec|test).ts?(x)"],
-      testEnvironment: "jsdom",
-      transform: {
-        "^.+\\.(ts|tsx)$": "ts-jest",
-      },
-      setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-    },
-    {
-      displayName: "apis",
-      testMatch: ["<rootDir>/apis/**/?(*.)+(spec|test).ts?(x)"],
-      testEnvironment: "node",
-      transform: {
-        "^.+\\.(ts|tsx)$": "ts-jest",
-      },
-    },
-    {
-      displayName: "packages",
-      testMatch: ["<rootDir>/packages/**/?(*.)+(spec|test).ts?(x)"],
-      testEnvironment: "node",
-      transform: {
-        "^.+\\.(ts|tsx)$": "ts-jest",
-      },
-    },
-  ],
+  testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+  testEnvironment: "node",
+  projects: ["<rootDir>/packages/*", "<rootDir>/apps/*", "<rootDir>/apis/*"],
   collectCoverageFrom: [
     "<rootDir>/apis/**/src/**",
     "<rootDir>/apps/**/src/**",
     "<rootDir>/packages/**/src/**",
   ],
-  coveragePathIgnorePatterns: [
-    "/node_modules/",
-    "/dist/",
-    "/__tests__/",
-    "/.serverless/",
-    "/.next/",
-  ],
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
+  coveragePathIgnorePatterns: ["/node_modules/", "/dist/", "/__tests__/", "/.next/"],
   coverageDirectory: "<rootDir>/coverage",
   coverageReporters: ["json", "lcov", "text", "clover", "cobertura"],
   coverageThreshold: {

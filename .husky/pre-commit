@@ -1,1 +1,1 @@
-npm test -- -o -b --silent
+npm run lint

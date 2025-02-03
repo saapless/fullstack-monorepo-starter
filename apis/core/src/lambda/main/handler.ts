@@ -1,4 +1,4 @@
-import { APIGatewayProxyHandlerV2 } from "aws-lambda";
+import { type APIGatewayProxyHandlerV2 } from "aws-lambda";
 
 export const MainHandler: APIGatewayProxyHandlerV2 = async (event) => {
   console.log("Event: ", event);
